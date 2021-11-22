@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>att.göra – vad ska du göra idag?</title>
+
+  <!--FontAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+  <div id="bar"></div>
+  <div class="container">
+    <h1>att.göra</h1>
+
+    <form class="todo-form">
+      <input type="text" class="todo-input" placeholder="Lägg till något att göra...">
+      <button type="submit" class="add-button">Lägg till</button>
+    </form>
+
+    <ul class="todo-items">
+      <!-- dummy item -->
+      <li class="item" data-key="1594003133171">
+        <input class="checkbox" type="checkbox">
+        Börja använda att.göra
+        <button class="delete-button">X</button>
+      </li>
+    </ul>
+
+    <div class="section-title">POÄNG</div>
+    <div id="pointholder"></div>
+
+    <div class="section-title">MEDALJER</div>
+    <div id="medalholder">
+      <div class="medalcontainer">
+        <div class="unfilled" id="medalone"><i class="fas fa-crown"></i></div>
+        <span class="nan" id="medalonetext">2 Sysslor</span>
+      </div>
+      <div class="medalcontainer">
+        <div class="unfilled" id="medaltwo">2</div>
+        <span class="nan" id="medaltwotext">4 Sysslor</span>
+      </div>
+      <div class="medalcontainer">
+        <div class="unfilled" id="medalthree">3</div>
+        <span class="nan" id="medalthreetext">6 Sysslor</span>
+      </div>
+    </div>
+
+  </div>
+  
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

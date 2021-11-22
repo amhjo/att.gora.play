@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&family=Varela+Round&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: #3D405B;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none; /* get rid of bullet points on side of list items */
+  }
+  
+  /* common style ends */
+
+  #bar {
+    position: absolute;
+    width: 100vw;
+    height: 10px;
+    background-color: #81B29A;
+  }
+  
+  /* container */
+  .container {
+    width: 100vw;
+    padding-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #F4F1DE;
+    font-size: 3rem;
+  }
+  
+  /* todo-form */
+  
+  .todo-form {
+    margin: 40px 0px;
+  }
+  
+  .todo-input {
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .add-button {
+    color: #2a2d46;
+    background-color: #F2CC8F;
+    border: none;
+    outline: none;
+    font-family: 'Varela Round';
+    border-radius: 5px;
+    padding: 8.9px;
+    font-size: 1.1rem;
+  }
+  
+  /* todo-form style ends */
+  
+  /* todo-items */
+  .todo-items {
+    margin-top: 5%;
+    min-width: 94%;
+  }
+  
+  /* each li with class="item" */
+  .item {
+    background-color: #4d506d;
+    color: #F4F1DE;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  
+  .item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  
+  /* item style end */
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+  
+  .delete-button {
+    float: right;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #E07A5F;
+    font-family: 'Varela Round', sans-serif;
+    color: #532417;
+    width: 25px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 1.4rem;
+    font-weight: 550;
+  }
+  
+  /* applied when the todo item is checked */
+  .checked { 
+    text-decoration: line-through;
+    color: #2a2d46;
+  }
+  
+  /* todo-items style ends */
+  
+  /* container style ends */
+
+  /* Medaljer */
+  #medalholder {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #medalholder * {
+    opacity: 1;
+    margin-right: 5%;
+  }
+
+  .medalcontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    width: 18%;
+    color: #08091a;
+    justify-content: center;
+  }
+
+  .medalcontainer span {
+    padding-top: 8%;
+  }
+
+  .filledtext {
+    color: #d1a55f;
+    animation: medal 0.35s ease;
+  }
+
+  .unfilled  {
+    text-align: center;
+    width: 50px;
+    background-color: #2a2d46;;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 5px inset #2a2d46;;
+    border-radius: 50%;
+    color: #2a2d46;;
+  }
+
+  .filledin {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 50px;
+    height: 50px;
+    background-color: #d1a55f;
+    font-size: 1.85rem;
+    border: 5px outset #886a3a;
+    border-radius: 50%;
+    color: #644514;
+    animation: medal 0.4s ease;
+  }
+
+  @keyframes medal {
+    0% {opacity: 0; transform: scale(1.2);}
+    30% {opacity: 1; transform: scale(0.8);}
+    100% {opacity: 1; transform: scale(1);}
+  }
+
+  /* Points */
+  .section-title {
+    margin-top: 5%;
+    color: #8b8da8;
+  }
+  #pointholder {
+    font-size: 3em;
+    font-weight: 600;
+    color: #F4F1DE;
+  }

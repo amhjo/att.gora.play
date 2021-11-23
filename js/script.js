@@ -6,14 +6,19 @@ const todoInput = document.querySelector('.todo-input');
 // select the <ul> with class="todo-items"
 const todoItemsList = document.querySelector('.todo-items');
 
-let pointHolder = document.getElementById('pointholder');
-let medalOne = document.getElementById('medalone');
-let medalOneText = document.getElementById('medalonetext');
-let medalTwo = document.getElementById('medaltwo');
-let medalTwoText = document.getElementById('medaltwotext');
-let medalThree = document.getElementById('medalthree');
-let medalThreeText = document.getElementById('medalthreetext');
-let pointYesterday = document.getElementById('pointyesterday');
+const pointHolder = document.getElementById('pointholder');
+const medalOne = document.getElementById('medalone');
+const medalOneText = document.getElementById('medalonetext');
+const medalTwo = document.getElementById('medaltwo');
+const medalTwoText = document.getElementById('medaltwotext');
+const medalThree = document.getElementById('medalthree');
+const medalThreeText = document.getElementById('medalthreetext');
+const pointYesterday = document.getElementById('pointyesterday');
+
+const achievementContainer = document.getElementById('achievement-container');
+const achievementText = document.getElementById('achievement-text');
+
+let hiddenAchievementValue = 0;
 
 let value = 0;
 
@@ -128,9 +133,10 @@ function toggle(id) {
 
       //Om en uppgift tickats i, visa upp siffran + 00 i pointholder
       if(value > 0) {
+        achievementFunction();
         pointHolder.innerHTML = value + "00";
         //Om poängen är mer än 3, visa upp medaljen i medalholder
-        if(value==1) {
+        if(value==2) {
           medalOne.className = "filledin";
           medalOneText.className = "filledtext";
         } else if (value==4) {
@@ -141,7 +147,6 @@ function toggle(id) {
             medalThreeText.className = "filledtext";
         }
       } 
-      
       /* MEDALJER SLUT*/
     }
     
@@ -179,3 +184,51 @@ todoItemsList.addEventListener('click', function(event) {
     deleteTodo(event.target.parentElement.getAttribute('data-key'));
   }
 });
+
+//Achievementfunktionen
+function achievementFunction(){
+  //Omvandlar från string till int och har si
+  let havString = window.localStorage.getItem('achievement', hiddenAchievementValue);
+  hiddenAchievementValue = Number(havString);
+
+  //Om användaren inte gjort detta innan:
+  if(hiddenAchievementValue < 1) {
+    achievementAnimation();
+    hiddenAchievementValue = 2;
+    achievementText.innerHTML = "Du har utfört din första uppgift i att.göra!"
+  } else if (hiddenAchievementValue == 2 && value == 2) {
+    achievementAnimation();
+    hiddenAchievementValue = 3;
+    achievementText.innerHTML = "Du har fått din första medalj!";
+  } else if (hiddenAchievementValue == 3 && value == 4) {
+    achievementAnimation();
+    hiddenAchievementValue = 4;
+    achievementText.innerHTML = "Du har fått din första andra medalj!"
+  } else if (hiddenAchievementValue == 4 && value == 6) {
+    achievementAnimation();
+    hiddenAchievementValue = 5;
+    achievementText.innerHTML = "Du har fått dina första tre medaljer!"
+  } else if (hiddenAchievementValue == 5 && value == 10) {
+    achievementAnimation();
+    hiddenAchievementValue = 6;
+    achievementText.innerHTML = "Du har tjänat dina första 1000 poäng!"
+  } else if (hiddenAchievementValue == 6 && value == 12) {
+    achievementAnimation();
+    hiddenAchievementValue = 7;
+    achievementText.innerHTML = "Du har fått supermycket gjort idag!"
+  }
+
+  //Sets HVA till localstorage
+  window.localStorage.setItem('achievement', hiddenAchievementValue);
+
+}
+
+function achievementAnimation(){
+  achievementContainer.style.animation = 'achievement-in 1s ease';
+  achievementContainer.style.animationFillMode = 'forwards';
+  setTimeout(animationOut, 5000);
+
+  function animationOut(){
+    achievementContainer.style.animation = 'achievement-out 0.8s ease';
+  }
+}

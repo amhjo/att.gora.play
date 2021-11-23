@@ -215,7 +215,11 @@ function achievementFunction(){
   } else if (hiddenAchievementValue == 6 && value == 12) {
     achievementAnimation();
     hiddenAchievementValue = 7;
-    achievementText.innerHTML = "Du har fått supermycket gjort idag!"
+    achievementText.innerHTML = "Tjänat 1200 poäng!"
+  } else if (hiddenAchievementValue == 7 && value == 15) {
+    achievementAnimation();
+    hiddenAchievementValue = 8;
+    achievementText.innerHTML = "Tjänat 1500 poäng!"
   }
 
   //Sets HVA till localstorage

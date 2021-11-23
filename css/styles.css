@@ -27,7 +27,7 @@
     position: absolute;
     width: 100vw;
     height: 10px;
-    background-color: #81B29A;
+    background-color: #8b8da8;
     z-index: 1000;
   }
   
@@ -81,6 +81,7 @@
   .todo-items {
     margin-top: 5%;
     min-width: 94%;
+    margin-bottom: 10%;
   }
   
   /* each li with class="item" */
@@ -160,7 +161,7 @@
     font-size: 13px;
     font-weight: 400;
     width: 18%;
-    color: #08091a;
+    color: #8b8da8;
     justify-content: center;
   }
 
@@ -208,7 +209,7 @@
 
   /* Points */
   .section-title {
-    margin-top: 5%;
+    margin-top: 10%;
     color: #8b8da8;
   }
   #pointholder {
@@ -222,7 +223,7 @@
   #achievement-container {
     box-sizing: border-box;
     font-size: 0.9rem;
-    padding: 5% 3% 3% 3%;
+    padding: 6% 3% 3% 3%;
     position: fixed;
     top: 1.2%;
     background-color: #8b8da8;

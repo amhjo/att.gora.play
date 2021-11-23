@@ -81,7 +81,7 @@
   .todo-items {
     margin-top: 5%;
     min-width: 94%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
   
   /* each li with class="item" */
@@ -209,7 +209,7 @@
 
   /* Points */
   .section-title {
-    margin-top: 10%;
+    margin-top: 5%;
     color: #8b8da8;
   }
   #pointholder {

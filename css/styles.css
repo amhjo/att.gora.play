@@ -45,6 +45,13 @@
     color: #F4F1DE;
     font-size: 3rem;
   }
+
+  h4 {
+    color: #8b8da8;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
   
   /* todo-form */
   

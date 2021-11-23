@@ -223,7 +223,7 @@
     box-sizing: border-box;
     font-size: 0.9rem;
     padding: 5% 3% 3% 3%;
-    position: absolute;
+    position: fixed;
     top: 1.2%;
     background-color: #8b8da8;
     color: #2a2d46;

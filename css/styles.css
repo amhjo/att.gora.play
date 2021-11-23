@@ -27,7 +27,7 @@
     position: absolute;
     width: 100vw;
     height: 10px;
-    background-color: #8b8da8;
+    background-color: #81B29A;
     z-index: 1000;
   }
   
@@ -65,7 +65,7 @@
   
   .add-button {
     color: #2a2d46;
-    background-color: #F2CC8F;
+    background-color: #81B29A;
     border: none;
     outline: none;
     font-family: 'Nunito';

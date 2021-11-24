@@ -82,6 +82,10 @@
     font-size: 1rem;
   }
 
+  #screen-too-big {
+    display: none;
+  }
+
   @media screen and (max-width: 375px) {
     .todo-input {
       width: 200px;
@@ -91,6 +95,33 @@
   @media screen and (max-width: 330px) {
     .todo-input {
       width: 180px;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    #screen-too-big {
+      text-align: center;
+      display: flex;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #3D405B;
+      left: 0;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 200;
+    }
+
+    #screen-too-big p {
+      color: #F4F1DE;
+      font-size: 1.1rem;
+      line-height: 1.8em;
+      margin-top: 2%;
+    }
+
+    .container {
+      display: none;
     }
   }
   

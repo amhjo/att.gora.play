@@ -279,7 +279,7 @@
     background-color: #8b8da8;
     color: #2a2d46;
     width: 100vw;
-    height: 11%;
+    height: 6em;
     transform: translateY(-100px);
     /*animation-name: achievement-in;*/
     animation-fill-mode: forwards;

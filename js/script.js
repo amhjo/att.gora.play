@@ -199,27 +199,27 @@ function achievementFunction(){
   } else if (hiddenAchievementValue == 2 && value == 2) {
     achievementAnimation();
     hiddenAchievementValue = 3;
-    achievementText.innerHTML = "Du har fått din första medalj!";
+    achievementText.innerHTML = "Fått din första medalj i att.göra!";
   } else if (hiddenAchievementValue == 3 && value == 4) {
     achievementAnimation();
     hiddenAchievementValue = 4;
-    achievementText.innerHTML = "Du har fått din första andra medalj!"
+    achievementText.innerHTML = "Fått två medaljer i att.göra"
   } else if (hiddenAchievementValue == 4 && value == 6) {
     achievementAnimation();
     hiddenAchievementValue = 5;
-    achievementText.innerHTML = "Du har fått dina första tre medaljer!"
+    achievementText.innerHTML = "Fått tre medaljer i att.göra"
   } else if (hiddenAchievementValue == 5 && value == 10) {
     achievementAnimation();
     hiddenAchievementValue = 6;
-    achievementText.innerHTML = "Du har tjänat dina första 1000 poäng!"
+    achievementText.innerHTML = "Tjänat dina första 1000 poäng!"
   } else if (hiddenAchievementValue == 6 && value == 12) {
     achievementAnimation();
     hiddenAchievementValue = 7;
-    achievementText.innerHTML = "Tjänat 1200 poäng!"
+    achievementText.innerHTML = "Tjänat dina första 1200 poäng!"
   } else if (hiddenAchievementValue == 7 && value == 15) {
     achievementAnimation();
     hiddenAchievementValue = 8;
-    achievementText.innerHTML = "Tjänat 1500 poäng!"
+    achievementText.innerHTML = "Tjänat dina första 1500 poäng!"
   }
 
   //Sets HVA till localstorage

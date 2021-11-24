@@ -24,7 +24,7 @@
   /* common style ends */
 
   #bar {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 10px;
     background-color: #81B29A;
@@ -80,6 +80,18 @@
     padding: 8.9px;
     font-weight: 700;
     font-size: 1rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    .todo-input {
+      width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .todo-input {
+      width: 180px;
+    }
   }
   
   /* todo-form style ends */
@@ -230,9 +242,9 @@
   #achievement-container {
     box-sizing: border-box;
     font-size: 0.9rem;
-    padding: 6% 3% 3% 3%;
+    padding: 7% 3% 3% 3%;
     position: fixed;
-    top: 1.2%;
+    top: 0.5%;
     background-color: #8b8da8;
     color: #2a2d46;
     width: 100vw;

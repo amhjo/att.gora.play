@@ -20,6 +20,8 @@ const achievementText = document.getElementById('achievement-text');
 
 let hiddenAchievementValue = 0;
 
+let dayNumber = 1;
+
 let value = 0;
 
 // array which stores every todos
@@ -191,11 +193,15 @@ function achievementFunction(){
   let havString = window.localStorage.getItem('achievement', hiddenAchievementValue);
   hiddenAchievementValue = Number(havString);
 
+  let dayTemp = window.localStorage.getItem('day', dayNumber);
+  dayNumber = Number(dayTemp);
+
   //Om användaren inte gjort detta innan:
   if(hiddenAchievementValue < 1) {
     achievementAnimation();
     hiddenAchievementValue = 2;
-    achievementText.innerHTML = "Du har utfört din första uppgift i att.göra!"
+    dayNumber = 1; //Sätter dagnumret till 1
+    achievementText.innerHTML = "Utfört din första uppgift i att.göra!"
   } else if (hiddenAchievementValue == 2 && value == 2) {
     achievementAnimation();
     hiddenAchievementValue = 3;
@@ -203,27 +209,54 @@ function achievementFunction(){
   } else if (hiddenAchievementValue == 3 && value == 4) {
     achievementAnimation();
     hiddenAchievementValue = 4;
-    achievementText.innerHTML = "Fått två medaljer i att.göra"
+    achievementText.innerHTML = "Fått två medaljer i att.göra!"
   } else if (hiddenAchievementValue == 4 && value == 6) {
     achievementAnimation();
     hiddenAchievementValue = 5;
-    achievementText.innerHTML = "Fått tre medaljer i att.göra"
+    achievementText.innerHTML = "Fått tre medaljer i att.göra!"
   } else if (hiddenAchievementValue == 5 && value == 10) {
     achievementAnimation();
     hiddenAchievementValue = 6;
-    achievementText.innerHTML = "Tjänat dina första 1000 poäng!"
+    achievementText.innerHTML = "Tjänat 1000 poäng!"
   } else if (hiddenAchievementValue == 6 && value == 12) {
     achievementAnimation();
     hiddenAchievementValue = 7;
-    achievementText.innerHTML = "Tjänat dina första 1200 poäng!"
+    achievementText.innerHTML = "Tjänat 1200 poäng!"
   } else if (hiddenAchievementValue == 7 && value == 15) {
     achievementAnimation();
     hiddenAchievementValue = 8;
-    achievementText.innerHTML = "Tjänat dina första 1500 poäng!"
+    achievementText.innerHTML = "Tjänat 1500 poäng!"
+  } else if (dayNumber == 1 && value == 1) { //Räknar dagarna så man får sina dagliga achievements
+    achievementAnimation();
+    dayNumber = 2;
+    achievementText.innerHTML = "Använt att.göra i två dagar!"
+  } else if (dayNumber == 2 && value == 1) {
+    achievementAnimation();
+    dayNumber = 3;
+    achievementText.innerHTML = "Använt att.göra i tre dagar!"
+  } else if (dayNumber == 3 && value == 1) {
+    achievementAnimation();
+    dayNumber = 4;
+    achievementText.innerHTML = "Använt att.göra i fyra dagar!"
+  } else if (dayNumber == 4 && value == 1) {
+    achievementAnimation();
+    dayNumber = 5;
+    achievementText.innerHTML = "Använt att.göra i fem dagar!"
+  } else if (dayNumber == 5 && value == 1) {
+    achievementAnimation();
+    dayNumber = 6;
+    achievementText.innerHTML = "Använt att.göra i sex dagar!"
+  } else if (dayNumber == 6 && value == 1) {
+    achievementAnimation();
+    dayNumber = 7;
+    achievementText.innerHTML = "Använt att.göra i sju dagar!"
   }
 
   //Sets HVA till localstorage
   window.localStorage.setItem('achievement', hiddenAchievementValue);
+
+  //Sets day till localstorage
+  window.localStorage.setItem('day', dayNumber);
 
 }
 
